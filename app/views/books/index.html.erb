@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Submission02</title>
+    <link rel="stylesheet" href="/assets/stylesheets/application.css">
+  </head>
+
+  <header></header>
+
+  <body>
+    <h1 class="welcome01">Books</h1>
+
+<table class="welcome02">
+    <thead>
+      <tr align="center"><th>Title</th> <th>Body</th> <th></th></tr>
+    </thead>
+
+<% @books.each do |book| %>
+
+    <tbody>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+      </tr>
+    </tbody>
+
+<% end %>
+
+</table>
+
+    <h2>New book</h2>
+
+<%= form_with model: @book do |f| %>
+
+  <%= f.label :title %></br>
+  <%= f.text_field :title %></br></br>
+
+  <%= f.label :body %></br>
+  <%= f.text_area :body %></br></br>
+
+  <%= f.submit 'Create Book' %>
+
+<% end %>
+
+    <footer></footer>
+
+</body>
+</html>
