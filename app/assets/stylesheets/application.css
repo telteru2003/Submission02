@@ -1,7 +1,15 @@
-.welcome01 {
-  text-indent: 1rem;
+
+ul {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 20px;
 }
 
-.welcome02 {
-  text-indent: 3rem;
+.contents {
+  list-style: disc
+}
+
+td {
+    padding: 10px;
+    border: 0px;
 }

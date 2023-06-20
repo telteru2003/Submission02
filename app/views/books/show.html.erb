@@ -1,4 +1,17 @@
-<h1><%= @book.title %></h1>
-<p><%= @book.body %></p>
+<div>
+  <ul>
+    <li><br><br>
 
-<p>Book was successfully created.</p>
+<%= flash[:success] %>
+<%= flash[:update] %>
+
+   <br><br><br>
+
+<b>Title: </b><%= @book.title %><br><br>
+<b>Body: </b><%= @book.body %></p><br>
+
+<%= link_to "Edit", edit_book_path(@book.id) %> | <a href="/books">Back</a>
+
+    </li>
+  </ul>
+</div>
